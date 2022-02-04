@@ -19,7 +19,7 @@ var bounds = dist.getBounds();
 map.fitBounds(dist.getBounds());
 map.setMaxBounds(bounds);
 function atributos(feature, layer) {
-    layer.bindTooltip(feature.properties.Distrito);
+    layer.bindTooltip(feature.properties.Distrito, {permanent: true, direction: "center", className: "labels"});
     layer.on({
         click: onclick
     });
